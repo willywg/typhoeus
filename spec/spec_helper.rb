@@ -10,5 +10,7 @@ $LOAD_PATH.unshift(path) unless $LOAD_PATH.include?(path)
 
 require path + '/typhoeus'
 
+Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each { |f| require f }
+
 RSpec.configure do |config|
 end
